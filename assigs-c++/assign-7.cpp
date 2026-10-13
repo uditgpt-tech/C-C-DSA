@@ -6,8 +6,10 @@ void volume(int);
 
 void substring(int start_ind, int end_ind=6);
 //void substring(int )
-
+void swap_array();
+void merge_array();
 #include<iostream>
+#include<string.h>
 using namespace std;
 int main(){
     //findhcf();
@@ -21,10 +23,14 @@ int main(){
     // cin>>L>>B>>H;
     // volume(L,B,H);
 
-    int start,end;
-    cout<<"enter starting and end index";
-    cin>>start>>end;
-    substring(start);
+    // int start,end;
+    // cout<<"enter starting and end index";
+    // cin>>start>>end;
+    // substring(start);
+
+    //swap_array();
+
+    merge_array();
     
 
 }
@@ -70,4 +76,45 @@ void substring(int start_ind ,int end_ind){ //agar def. ke andar default value s
         cout<<arr[i];
     }
 
+}
+
+
+void swap_array(){
+    int arr[]={1,2,3,4,5};  //int arr[] int type ke var. ke liye nahi hai function 
+    int brr[]={11,12,13,14,15};
+    int n1=sizeof(arr)/sizeof(arr[0]);
+    int temp;
+
+    for(int i=0; i<n1;i++){
+        temp=arr[i];
+        arr[i]=brr[i];
+        brr[i]=temp;
+    }
+    for(int i=0; i<n1;i++){
+        cout<<arr[i]<<" "<<brr[i]<<endl;
+
+    }
+
+    
+}
+void merge_array(){
+    int arr[10]={1,2,3,4,5};  //int arr[] int type ke var. ke liye nahi hai function 
+    int brr[5]={11,12,13,14,15};
+    int n1=sizeof(arr)/sizeof(arr[0]);
+    int n2=sizeof(brr)/sizeof(brr[0]);
+
+    //cout<<n1;
+    int temp;
+
+
+    for(int i=n2,j=0; i<n1;i++,j++){
+        arr[i]=brr[j];
+        
+
+    }
+    for(int i =0;arr[i];i++){
+        cout<<arr[i]<<endl;
+    }
+
+    
 }
